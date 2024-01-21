@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D3AF03E8-B78D-49E6-A146-45AD6C2BF59B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D158B410-B3C3-4702-9D64-54CEFA73C77F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouveBeenFramedBroadcastExtension/SampleHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "broadcastAnnotated(withApplicationInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92E5D661-02CF-4772-9B3C-2A382BCA5EE5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouveBeenFramedBroadcastExtension/SampleHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "broadcastStarted(withSetupInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8926A97-2A8F-4A19-A976-4944E414A9C0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouveBeenFramed/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "C8926A97-2A8F-4A19-A976-4944E414A9C0 - 46c2c049a3a52a18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(YouveBeenFramed.EventLogView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in YouveBeenFramed.ContentView.body.getter : some"
+                  moduleName = "YouveBeenFramed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/laptop/Development/FRAM3D-UV-BIN/YouveBeenFramed/YouveBeenFramed/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "592">
+               </Location>
+               <Location
+                  uuid = "C8926A97-2A8F-4A19-A976-4944E414A9C0 - e60d205c28180028"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, YouveBeenFramed.EventLogView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in YouveBeenFramed.ContentView.body.getter : some"
+                  moduleName = "YouveBeenFramed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/laptop/Development/FRAM3D-UV-BIN/YouveBeenFramed/YouveBeenFramed/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC4FD6A6-B64B-4604-A47F-C42A691DF303"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouveBeenFramedBroadcastExtension/SampleHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "broadcastFinished()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E006F57-8A35-400E-BCCA-E72FB4B4D44B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouveBeenFramed/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2E006F57-8A35-400E-BCCA-E72FB4B4D44B - 46c2c049a3a52a3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(YouveBeenFramed.EventLogView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in YouveBeenFramed.ContentView.body.getter : some"
+                  moduleName = "YouveBeenFramed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/laptop/Development/FRAM3D-UV-BIN/YouveBeenFramed/YouveBeenFramed/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  uuid = "2E006F57-8A35-400E-BCCA-E72FB4B4D44B - e60d205c281800c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, YouveBeenFramed.EventLogView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in YouveBeenFramed.ContentView.body.getter : some"
+                  moduleName = "YouveBeenFramed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/laptop/Development/FRAM3D-UV-BIN/YouveBeenFramed/YouveBeenFramed/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "592">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

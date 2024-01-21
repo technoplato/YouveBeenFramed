@@ -6,59 +6,77 @@
 //
 
 import SwiftUI
+import ReplayKit
 
 struct ContentView: View {
     var body: some View {
-      VStack {
-          OpenedAppsView(viewModel: OpenedAppsViewModel(appGroup: "group.fram3duvbin.ios"))
-      }
+        VStack {
+          Text("hi")
+            EventLogView(viewModel: EventLogViewModel(appGroup: "group.fly.bye"))
+          Button("Check Shared Events") {
+            let sharedDefaults = UserDefaults(suiteName: "group.fly.bye")
+            let eventLog = sharedDefaults?.array(forKey: "eventLog") as? [String] ?? []
+            print(eventLog.count)
+          }
+        }
         .padding()
     }
 }
-
-#Preview {
-    ContentView()
-}
-
 import Foundation
 import Combine
 
-class OpenedAppsViewModel: ObservableObject {
-    @Published var openedApps: [String] = []
+import Foundation
+import Combine
+class EventLogFilePresenter: NSObject, NSFilePresenter {
+    let presentedItemURL: URL
+    let presentedItemOperationQueue: OperationQueue = .main
 
-    private var cancellables = Set<AnyCancellable>()
-    private let userDefaults: UserDefaults
+    init(fileURL: URL) {
+        presentedItemURL = fileURL
+        super.init()
+        NSFileCoordinator.addFilePresenter(self)
+    }
 
-    init(appGroup: String) {
-        guard let userDefaults = UserDefaults(suiteName: appGroup) else {
-            fatalError("Could not initialize UserDefaults with app group: \(appGroup)")
+    func presentedItemDidChange() {
+        // Read the file and update your UI accordingly
+        // You might want to post a notification or use some other method to update the UI
+        print("File changed, update UI")
+    }
+}
+class EventLogViewModel: ObservableObject {
+    @Published var eventLog: [String] = []
+    private let filePresenter: EventLogFilePresenter
+
+    init() {
+        let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.fram3duvbin.ios")!
+        let fileURL = containerURL.appendingPathComponent("EventLog.txt")
+        filePresenter = EventLogFilePresenter(fileURL: fileURL)
+        
+        filePresenter.onFileChange = { [weak self] in
+            self?.loadEventLog()
         }
-        self.userDefaults = userDefaults
+    }
 
-        // Observing the changes in UserDefaults
-        userDefaults
-            .publisher(for: \.openedAppsKey, options: [.initial, .new])
-            .compactMap { $0 }
-            
-            .assign(to: &$openedApps)
+    private func loadEventLog() {
+        let fileURL = filePresenter.presentedItemURL
+        if let fileContents = try? String(contentsOf: fileURL, encoding: .utf8) {
+            DispatchQueue.main.async {
+                self.eventLog = fileContents.components(separatedBy: .newlines)
+                print("Loaded event log: \(self.eventLog)")
+            }
+        }
     }
 }
 
-struct OpenedAppsView: View {
-    @ObservedObject var viewModel: OpenedAppsViewModel
+struct EventLogView: View {
+    @ObservedObject var viewModel: EventLogViewModel
 
     var body: some View {
         NavigationView {
-            List(viewModel.openedApps, id: \.self) { app in
-                Text(app)
+            List(viewModel.eventLog, id: \.self) { logEntry in
+                Text(logEntry)
             }
-            .navigationBarTitle("Opened Applications")
+            .navigationBarTitle("Event Log")
         }
-    }
-}
-
-extension UserDefaults {
-    @objc dynamic var openedAppsKey: [String]? {
-        return array(forKey: "openedApps") as? [String]
     }
 }

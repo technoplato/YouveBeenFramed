@@ -1,15 +1,34 @@
 import ReplayKit
 
 class SampleHandler: RPBroadcastSampleHandler {
-    private let sharedDefaults = UserDefaults(suiteName: "group.fram3duvbin.ios")
+  private let sharedFileURL: URL
 
-    private func logEvent(_ event: String) {
-        print(event)
-        var eventLog = sharedDefaults?.array(forKey: "eventLog") as? [String] ?? []
-        eventLog.append("\(Date()): \(event)")
-        sharedDefaults?.set(eventLog, forKey: "eventLog")
-    }
-    
+  init() {
+      if let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.fram3duvbin.ios") {
+          sharedFileURL = containerURL.appendingPathComponent("EventLog.txt")
+      } else {
+          fatalError("Shared container not available")
+      }
+  }
+
+  private func logEvent(_ event: String) {
+      let fileCoordinator = NSFileCoordinator()
+      var newEventLog = "\(Date()): \(event)\n"
+      
+      fileCoordinator.coordinate(writingItemAt: sharedFileURL, options: .forMerging, error: nil) { (url) in
+          if let fileHandle = try? FileHandle(forWritingTo: url) {
+              fileHandle.seekToEndOfFile()
+              if let data = newEventLog.data(using: .utf8) {
+                  fileHandle.write(data)
+              }
+              fileHandle.closeFile()
+          } else {
+              try? newEventLog.write(to: url, atomically: true, encoding: .utf8)
+          }
+      }
+  }
+  
+  
     override func broadcastStarted(withSetupInfo setupInfo: [String : NSObject]?) {
         logEvent("Broadcast started - Setup Info: \(String(describing: setupInfo))")
     }
@@ -37,19 +56,19 @@ class SampleHandler: RPBroadcastSampleHandler {
     override func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
         switch sampleBufferType {
         case RPSampleBufferType.video:
-            logEvent("Processing video sample buffer")
+//            logEvent("Processing video sample buffer")
             // Handle video sample buffer
             break
         case RPSampleBufferType.audioApp:
-            logEvent("Processing app audio sample buffer")
+//            logEvent("Processing app audio sample buffer")
             // Handle audio sample buffer for app audio
             break
         case RPSampleBufferType.audioMic:
-            logEvent("Processing microphone audio sample buffer")
+//            logEvent("Processing microphone audio sample buffer")
             // Handle audio sample buffer for mic audio
             break
         @unknown default:
-            logEvent("Encountered unknown type of sample buffer")
+//            logEvent("Encountered unknown type of sample buffer")
             fatalError("Unknown type of sample buffer")
         }
     }

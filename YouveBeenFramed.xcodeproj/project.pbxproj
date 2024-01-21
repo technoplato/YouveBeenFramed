@@ -14,11 +14,6 @@
 		401866DB2B5CB71200AD5C07 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401866DA2B5CB71200AD5C07 /* ReplayKit.framework */; };
 		401866DE2B5CB71200AD5C07 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401866DD2B5CB71200AD5C07 /* SampleHandler.swift */; };
 		401866E22B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 401866D82B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		401866F12B5CBA9E00AD5C07 /* YouveBeenFramedShared.h in Headers */ = {isa = PBXBuildFile; fileRef = 401866F02B5CBA9E00AD5C07 /* YouveBeenFramedShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		401866F42B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */; };
-		401866F52B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		401866FF2B5CBBCE00AD5C07 /* YouveBeenFramedShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */; };
-		401867052B5CBCA700AD5C07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401867042B5CBCA700AD5C07 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,20 +23,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 401866D72B5CB71200AD5C07;
 			remoteInfo = YouveBeenFramedBroadcastExtension;
-		};
-		401866F22B5CBA9E00AD5C07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 401866BB2B5CB53800AD5C07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 401866ED2B5CBA9E00AD5C07;
-			remoteInfo = YouveBeenFramedShared;
-		};
-		401867012B5CBBCE00AD5C07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 401866BB2B5CB53800AD5C07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 401866ED2B5CBA9E00AD5C07;
-			remoteInfo = YouveBeenFramedShared;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -63,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				401866F52B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,9 +62,6 @@
 		401866DF2B5CB71200AD5C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		401866E72B5CB76100AD5C07 /* YouveBeenFramed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouveBeenFramed.entitlements; sourceTree = "<group>"; };
 		401866E82B5CB79600AD5C07 /* YouveBeenFramedBroadcastExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouveBeenFramedBroadcastExtension.entitlements; sourceTree = "<group>"; };
-		401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouveBeenFramedShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		401866F02B5CBA9E00AD5C07 /* YouveBeenFramedShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouveBeenFramedShared.h; sourceTree = "<group>"; };
-		401867042B5CBCA700AD5C07 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				401866F42B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,14 +77,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				401866DB2B5CB71200AD5C07 /* ReplayKit.framework in Frameworks */,
-				401866FF2B5CBBCE00AD5C07 /* YouveBeenFramedShared.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		401866EB2B5CBA9E00AD5C07 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +88,6 @@
 			children = (
 				401866C52B5CB53800AD5C07 /* YouveBeenFramed */,
 				401866DC2B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension */,
-				401866EF2B5CBA9E00AD5C07 /* YouveBeenFramedShared */,
 				401866D92B5CB71200AD5C07 /* Frameworks */,
 				401866C42B5CB53800AD5C07 /* Products */,
 			);
@@ -131,7 +98,6 @@
 			children = (
 				401866C32B5CB53800AD5C07 /* YouveBeenFramed.app */,
 				401866D82B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension.appex */,
-				401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,27 +140,7 @@
 			path = YouveBeenFramedBroadcastExtension;
 			sourceTree = "<group>";
 		};
-		401866EF2B5CBA9E00AD5C07 /* YouveBeenFramedShared */ = {
-			isa = PBXGroup;
-			children = (
-				401866F02B5CBA9E00AD5C07 /* YouveBeenFramedShared.h */,
-				401867042B5CBCA700AD5C07 /* Constants.swift */,
-			);
-			path = YouveBeenFramedShared;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		401866E92B5CBA9E00AD5C07 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				401866F12B5CBA9E00AD5C07 /* YouveBeenFramedShared.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		401866C22B5CB53800AD5C07 /* YouveBeenFramed */ = {
@@ -211,7 +157,6 @@
 			);
 			dependencies = (
 				401866E12B5CB71200AD5C07 /* PBXTargetDependency */,
-				401866F32B5CBA9E00AD5C07 /* PBXTargetDependency */,
 			);
 			name = YouveBeenFramed;
 			productName = YouveBeenFramed;
@@ -229,30 +174,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				401867022B5CBBCE00AD5C07 /* PBXTargetDependency */,
 			);
 			name = YouveBeenFramedBroadcastExtension;
 			productName = YouveBeenFramedBroadcastExtension;
 			productReference = 401866D82B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
-		};
-		401866ED2B5CBA9E00AD5C07 /* YouveBeenFramedShared */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 401866F62B5CBA9E00AD5C07 /* Build configuration list for PBXNativeTarget "YouveBeenFramedShared" */;
-			buildPhases = (
-				401866E92B5CBA9E00AD5C07 /* Headers */,
-				401866EA2B5CBA9E00AD5C07 /* Sources */,
-				401866EB2B5CBA9E00AD5C07 /* Frameworks */,
-				401866EC2B5CBA9E00AD5C07 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = YouveBeenFramedShared;
-			productName = YouveBeenFramedShared;
-			productReference = 401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -269,10 +195,6 @@
 					};
 					401866D72B5CB71200AD5C07 = {
 						CreatedOnToolsVersion = 15.0;
-					};
-					401866ED2B5CBA9E00AD5C07 = {
-						CreatedOnToolsVersion = 15.0;
-						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -291,7 +213,6 @@
 			targets = (
 				401866C22B5CB53800AD5C07 /* YouveBeenFramed */,
 				401866D72B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension */,
-				401866ED2B5CBA9E00AD5C07 /* YouveBeenFramedShared */,
 			);
 		};
 /* End PBXProject section */
@@ -307,13 +228,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		401866D62B5CB71200AD5C07 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		401866EC2B5CBA9E00AD5C07 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,14 +254,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		401866EA2B5CBA9E00AD5C07 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				401867052B5CBCA700AD5C07 /* Constants.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -355,16 +261,6 @@
 			isa = PBXTargetDependency;
 			target = 401866D72B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension */;
 			targetProxy = 401866E02B5CB71200AD5C07 /* PBXContainerItemProxy */;
-		};
-		401866F32B5CBA9E00AD5C07 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 401866ED2B5CBA9E00AD5C07 /* YouveBeenFramedShared */;
-			targetProxy = 401866F22B5CBA9E00AD5C07 /* PBXContainerItemProxy */;
-		};
-		401867022B5CBBCE00AD5C07 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 401866ED2B5CBA9E00AD5C07 /* YouveBeenFramedShared */;
-			targetProxy = 401867012B5CBBCE00AD5C07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -602,75 +498,6 @@
 			};
 			name = Release;
 		};
-		401866F72B5CBA9E00AD5C07 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4EC72DECN9;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fram3duvbin.ios.YouveBeenFramedShared;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		401866F82B5CBA9E00AD5C07 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4EC72DECN9;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fram3duvbin.ios.YouveBeenFramedShared;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -697,15 +524,6 @@
 			buildConfigurations = (
 				401866E42B5CB71200AD5C07 /* Debug */,
 				401866E52B5CB71200AD5C07 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		401866F62B5CBA9E00AD5C07 /* Build configuration list for PBXNativeTarget "YouveBeenFramedShared" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				401866F72B5CBA9E00AD5C07 /* Debug */,
-				401866F82B5CBA9E00AD5C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
