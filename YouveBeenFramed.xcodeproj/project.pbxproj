@@ -18,6 +18,7 @@
 		401866F42B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */; };
 		401866F52B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		401866FF2B5CBBCE00AD5C07 /* YouveBeenFramedShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */; };
+		401867052B5CBCA700AD5C07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401867042B5CBCA700AD5C07 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		401866E82B5CB79600AD5C07 /* YouveBeenFramedBroadcastExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouveBeenFramedBroadcastExtension.entitlements; sourceTree = "<group>"; };
 		401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouveBeenFramedShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		401866F02B5CBA9E00AD5C07 /* YouveBeenFramedShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouveBeenFramedShared.h; sourceTree = "<group>"; };
+		401867042B5CBCA700AD5C07 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				401866F02B5CBA9E00AD5C07 /* YouveBeenFramedShared.h */,
+				401867042B5CBCA700AD5C07 /* Constants.swift */,
 			);
 			path = YouveBeenFramedShared;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 					};
 					401866ED2B5CBA9E00AD5C07 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -340,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				401867052B5CBCA700AD5C07 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +605,7 @@
 		401866F72B5CBA9E00AD5C07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -623,6 +629,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -633,6 +640,7 @@
 		401866F82B5CBA9E00AD5C07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
