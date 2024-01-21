@@ -17,6 +17,7 @@
 		401866F12B5CBA9E00AD5C07 /* YouveBeenFramedShared.h in Headers */ = {isa = PBXBuildFile; fileRef = 401866F02B5CBA9E00AD5C07 /* YouveBeenFramedShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		401866F42B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */; };
 		401866F52B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		401866FF2B5CBBCE00AD5C07 /* YouveBeenFramedShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401866EE2B5CBA9E00AD5C07 /* YouveBeenFramedShared.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,13 @@
 			remoteInfo = YouveBeenFramedBroadcastExtension;
 		};
 		401866F22B5CBA9E00AD5C07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 401866BB2B5CB53800AD5C07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 401866ED2B5CBA9E00AD5C07;
+			remoteInfo = YouveBeenFramedShared;
+		};
+		401867012B5CBBCE00AD5C07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 401866BB2B5CB53800AD5C07 /* Project object */;
 			proxyType = 1;
@@ -91,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				401866DB2B5CB71200AD5C07 /* ReplayKit.framework in Frameworks */,
+				401866FF2B5CBBCE00AD5C07 /* YouveBeenFramedShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +226,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				401867022B5CBBCE00AD5C07 /* PBXTargetDependency */,
 			);
 			name = YouveBeenFramedBroadcastExtension;
 			productName = YouveBeenFramedBroadcastExtension;
@@ -345,6 +355,11 @@
 			isa = PBXTargetDependency;
 			target = 401866ED2B5CBA9E00AD5C07 /* YouveBeenFramedShared */;
 			targetProxy = 401866F22B5CBA9E00AD5C07 /* PBXContainerItemProxy */;
+		};
+		401867022B5CBBCE00AD5C07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 401866ED2B5CBA9E00AD5C07 /* YouveBeenFramedShared */;
+			targetProxy = 401867012B5CBBCE00AD5C07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
