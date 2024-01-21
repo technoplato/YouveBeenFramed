@@ -50,6 +50,8 @@
 		401866DA2B5CB71200AD5C07 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		401866DD2B5CB71200AD5C07 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
 		401866DF2B5CB71200AD5C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		401866E72B5CB76100AD5C07 /* YouveBeenFramed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouveBeenFramed.entitlements; sourceTree = "<group>"; };
+		401866E82B5CB79600AD5C07 /* YouveBeenFramedBroadcastExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouveBeenFramedBroadcastExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		401866C52B5CB53800AD5C07 /* YouveBeenFramed */ = {
 			isa = PBXGroup;
 			children = (
+				401866E72B5CB76100AD5C07 /* YouveBeenFramed.entitlements */,
 				401866C62B5CB53800AD5C07 /* YouveBeenFramedApp.swift */,
 				401866C82B5CB53800AD5C07 /* ContentView.swift */,
 				401866CA2B5CB53B00AD5C07 /* Assets.xcassets */,
@@ -120,6 +123,7 @@
 		401866DC2B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension */ = {
 			isa = PBXGroup;
 			children = (
+				401866E82B5CB79600AD5C07 /* YouveBeenFramedBroadcastExtension.entitlements */,
 				401866DD2B5CB71200AD5C07 /* SampleHandler.swift */,
 				401866DF2B5CB71200AD5C07 /* Info.plist */,
 			);
@@ -375,6 +379,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = YouveBeenFramed/YouveBeenFramed.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YouveBeenFramed/Preview Content\"";
@@ -405,6 +410,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = YouveBeenFramed/YouveBeenFramed.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YouveBeenFramed/Preview Content\"";
@@ -432,6 +438,7 @@
 		401866E42B5CB71200AD5C07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = YouveBeenFramedBroadcastExtension/YouveBeenFramedBroadcastExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4EC72DECN9;
@@ -457,6 +464,7 @@
 		401866E52B5CB71200AD5C07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = YouveBeenFramedBroadcastExtension/YouveBeenFramedBroadcastExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4EC72DECN9;
