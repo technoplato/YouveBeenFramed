@@ -1,54 +1,51 @@
-//
-//  SampleHandler.swift
-//  YouveBeenFramedBroadcastExtension
-//
-//  Created by laptop on 1/20/24.
-//
-
 import ReplayKit
 
 class SampleHandler: RPBroadcastSampleHandler {
-  
-  override func broadcastAnnotated(withApplicationInfo applicationInfo: [AnyHashable : Any]) {
-      // Handle the application info
-      if let appInfo = applicationInfo as? [String: Any] {
-          print("Received app info: \(appInfo)")
-      }
-  }
+    private let sharedDefaults = UserDefaults(suiteName: "group.fram3duvbin.ios")
 
+    private func logEvent(_ event: String) {
+        print(event)
+        var eventLog = sharedDefaults?.array(forKey: "eventLog") as? [String] ?? []
+        eventLog.append("\(Date()): \(event)")
+        sharedDefaults?.set(eventLog, forKey: "eventLog")
+    }
+    
     override func broadcastStarted(withSetupInfo setupInfo: [String : NSObject]?) {
-        // User has requested to start the broadcast. Setup info from the UI extension can be supplied but optional.
-      print("broadcastStarted")
+        logEvent("Broadcast started - Setup Info: \(String(describing: setupInfo))")
     }
     
     override func broadcastPaused() {
-        // User has requested to pause the broadcast. Samples will stop being delivered.
-      print("broadcastPaused")
+        logEvent("Broadcast paused")
     }
     
     override func broadcastResumed() {
-        // User has requested to resume the broadcast. Samples delivery will resume.
-      print("broadcastResumed")
+        logEvent("Broadcast resumed")
     }
     
     override func broadcastFinished() {
-      print("broadcastFinished")
-        // User has requested to finish the broadcast.
+        logEvent("Broadcast finished")
+    }
+    
+    override func broadcastAnnotated(withApplicationInfo applicationInfo: [AnyHashable : Any]) {
+        logEvent("Received application info: \(applicationInfo)")
     }
     
     override func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
         switch sampleBufferType {
         case RPSampleBufferType.video:
+            logEvent("Processing video sample buffer")
             // Handle video sample buffer
             break
         case RPSampleBufferType.audioApp:
+            logEvent("Processing app audio sample buffer")
             // Handle audio sample buffer for app audio
             break
         case RPSampleBufferType.audioMic:
+            logEvent("Processing microphone audio sample buffer")
             // Handle audio sample buffer for mic audio
             break
         @unknown default:
-            // Handle other sample buffer types
+            logEvent("Encountered unknown type of sample buffer")
             fatalError("Unknown type of sample buffer")
         }
     }
