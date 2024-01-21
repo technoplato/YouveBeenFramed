@@ -27,7 +27,11 @@ class SampleHandler: RPBroadcastSampleHandler {
     }
     
     override func broadcastAnnotated(withApplicationInfo applicationInfo: [AnyHashable : Any]) {
-        logEvent("Received application info: \(applicationInfo)")
+        if let applicationName = applicationInfo["UIApplicationOpenURLOptionUniversalLinksOnly"] as? String {
+            logEvent("Application opened: \(applicationName)")
+        } else {
+            logEvent("Received application info: \(applicationInfo)")
+        }
     }
     
     override func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
