@@ -11,7 +11,34 @@
 		401866C92B5CB53800AD5C07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401866C82B5CB53800AD5C07 /* ContentView.swift */; };
 		401866CB2B5CB53B00AD5C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 401866CA2B5CB53B00AD5C07 /* Assets.xcassets */; };
 		401866CE2B5CB53B00AD5C07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 401866CD2B5CB53B00AD5C07 /* Preview Assets.xcassets */; };
+		401866DB2B5CB71200AD5C07 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401866DA2B5CB71200AD5C07 /* ReplayKit.framework */; };
+		401866DE2B5CB71200AD5C07 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401866DD2B5CB71200AD5C07 /* SampleHandler.swift */; };
+		401866E22B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 401866D82B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		401866E02B5CB71200AD5C07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 401866BB2B5CB53800AD5C07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 401866D72B5CB71200AD5C07;
+			remoteInfo = YouveBeenFramedBroadcastExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		401866E62B5CB71200AD5C07 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				401866E22B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		401866C32B5CB53800AD5C07 /* YouveBeenFramed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouveBeenFramed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +46,10 @@
 		401866C82B5CB53800AD5C07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		401866CA2B5CB53B00AD5C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		401866CD2B5CB53B00AD5C07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		401866D82B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YouveBeenFramedBroadcastExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		401866DA2B5CB71200AD5C07 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		401866DD2B5CB71200AD5C07 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		401866DF2B5CB71200AD5C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +60,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		401866D52B5CB71200AD5C07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				401866DB2B5CB71200AD5C07 /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				401866C52B5CB53800AD5C07 /* YouveBeenFramed */,
+				401866DC2B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension */,
+				401866D92B5CB71200AD5C07 /* Frameworks */,
 				401866C42B5CB53800AD5C07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				401866C32B5CB53800AD5C07 /* YouveBeenFramed.app */,
+				401866D82B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +109,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		401866D92B5CB71200AD5C07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				401866DA2B5CB71200AD5C07 /* ReplayKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		401866DC2B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension */ = {
+			isa = PBXGroup;
+			children = (
+				401866DD2B5CB71200AD5C07 /* SampleHandler.swift */,
+				401866DF2B5CB71200AD5C07 /* Info.plist */,
+			);
+			path = YouveBeenFramedBroadcastExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +136,34 @@
 				401866BF2B5CB53800AD5C07 /* Sources */,
 				401866C02B5CB53800AD5C07 /* Frameworks */,
 				401866C12B5CB53800AD5C07 /* Resources */,
+				401866E62B5CB71200AD5C07 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				401866E12B5CB71200AD5C07 /* PBXTargetDependency */,
 			);
 			name = YouveBeenFramed;
 			productName = YouveBeenFramed;
 			productReference = 401866C32B5CB53800AD5C07 /* YouveBeenFramed.app */;
 			productType = "com.apple.product-type.application";
+		};
+		401866D72B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 401866E32B5CB71200AD5C07 /* Build configuration list for PBXNativeTarget "YouveBeenFramedBroadcastExtension" */;
+			buildPhases = (
+				401866D42B5CB71200AD5C07 /* Sources */,
+				401866D52B5CB71200AD5C07 /* Frameworks */,
+				401866D62B5CB71200AD5C07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YouveBeenFramedBroadcastExtension;
+			productName = YouveBeenFramedBroadcastExtension;
+			productReference = 401866D82B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +176,9 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					401866C22B5CB53800AD5C07 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					401866D72B5CB71200AD5C07 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
@@ -116,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				401866C22B5CB53800AD5C07 /* YouveBeenFramed */,
+				401866D72B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +209,13 @@
 			files = (
 				401866CE2B5CB53B00AD5C07 /* Preview Assets.xcassets in Resources */,
 				401866CB2B5CB53B00AD5C07 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		401866D62B5CB71200AD5C07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +231,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		401866D42B5CB71200AD5C07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				401866DE2B5CB71200AD5C07 /* SampleHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		401866E12B5CB71200AD5C07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 401866D72B5CB71200AD5C07 /* YouveBeenFramedBroadcastExtension */;
+			targetProxy = 401866E02B5CB71200AD5C07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		401866CF2B5CB53B00AD5C07 /* Debug */ = {
@@ -267,6 +372,7 @@
 		401866D22B5CB53B00AD5C07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +402,7 @@
 		401866D32B5CB53B00AD5C07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,6 +429,56 @@
 			};
 			name = Release;
 		};
+		401866E42B5CB71200AD5C07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4EC72DECN9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YouveBeenFramedBroadcastExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = YouveBeenFramedBroadcastExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fram3duvbin.ios.YouveBeenFramed.YouveBeenFramedBroadcastExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		401866E52B5CB71200AD5C07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4EC72DECN9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YouveBeenFramedBroadcastExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = YouveBeenFramedBroadcastExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fram3duvbin.ios.YouveBeenFramed.YouveBeenFramedBroadcastExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +496,15 @@
 			buildConfigurations = (
 				401866D22B5CB53B00AD5C07 /* Debug */,
 				401866D32B5CB53B00AD5C07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		401866E32B5CB71200AD5C07 /* Build configuration list for PBXNativeTarget "YouveBeenFramedBroadcastExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				401866E42B5CB71200AD5C07 /* Debug */,
+				401866E52B5CB71200AD5C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
